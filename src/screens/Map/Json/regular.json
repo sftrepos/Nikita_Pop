@@ -1,0 +1,259 @@
+[
+  {
+    "name": "CS Study Session",
+    "description": "In-person meet-up study session at CS building",
+    "creator": "60f472c468012d3287d887a1",
+    "members": ["60f472c468012d3287d887a1", "60f471ec0a2768318c88cba6"],
+    "emoji": "📖",
+    "tags": ["reading", "study"],
+    "location": {
+      "point": {
+        "type": "Point",
+        "coordinates": [-97.73653886584249, 30.28594225490844]
+      },
+      "name": "The University of Texas: Department of Computer Science",
+      "address": "2317 Speedway, Austin, TX 78712"
+    },
+    "isPrivate": false,
+    "capacity": 5
+  },
+  {
+    "name": "Basketball training",
+    "description": "Travelling to basketball sports team training",
+    "creator": "60f471d848e6083139e90a7c",
+    "members": [
+      "60f471d848e6083139e90a7c",
+      "60f47128b4389d3086293462",
+      "60f47072d0d1842f8967e882",
+      "60f46ff1e43a652eff14920d",
+      "60f46f1c5a9bb12dff86b5ba"
+    ],
+    "emoji": "🏀",
+    "tags": ["activity", "meet-up", "sports"],
+    "location": {
+      "point": {
+        "type": "Point",
+        "coordinates": [-97.73944461588377, 30.285371005488]
+      },
+      "name": "UT Turtle Pond",
+      "address": "UT Turtle Pond, Austin, TX 78705"
+    },
+    "isPrivate": false,
+    "capacity": 10
+  },
+  {
+    "name": "Soccer casual session",
+    "description": "Casual soccer meet-up",
+    "creator": "60f46e41ea35c32cf168aa58",
+    "members": [
+      "60f46e41ea35c32cf168aa58",
+      "60f46cd9e329d32b30d1f86c",
+      "60f421dac3bf3cf814a4c9a5",
+      "60f4218b2cc799f77d3e18cb"
+    ],
+    "emoji": "⚽️",
+    "tags": ["activity", "meet-up", "sports"],
+    "location": {
+      "point": {
+        "type": "Point",
+        "coordinates": [-97.73287438992767, 30.283766806115636]
+      },
+      "name": "Recreational Sports Center",
+      "address": "2001 San Jacinto Blvd, Austin, TX 78712"
+    },
+    "isPrivate": false,
+    "capacity": 22
+  },
+  {
+    "name": "Meal at Vic and Al's!",
+    "description": "Going to Vic and Al's for just a meal together",
+    "creator": "60f38d5f8e3cba000d23719c",
+    "members": [
+      "60f38d5f8e3cba000d23719c",
+      "60f3742b849c8f000dcfaab6",
+      "60f37339849c8f000dcfaaa1"
+    ],
+    "emoji": "🍲",
+    "tags": ["food"],
+    "location": {
+      "point": {
+        "type": "Point",
+        "coordinates": [-97.7390966431586, 30.28055436529017]
+      },
+      "name": "Lot 15",
+      "address": "Lot 15, 2501 Whitis Ave, Austin, TX 78705"
+    },
+    "isPrivate": false,
+    "capacity": 4
+  },
+  {
+    "name": "Swimming at Lee & Joe Swimming Center",
+    "description": "casual swim",
+    "creator": "60f36efe849c8f000dcfaa82",
+    "members": ["60f36efe849c8f000dcfaa82", "60f34e67849c8f000dcfaa08"],
+    "emoji": "🏊",
+    "tags": ["swimming", "activity", "exercise"],
+    "location": {
+      "point": {
+        "type": "Point",
+        "coordinates": [-97.73381768296161, 30.283941684267624]
+      },
+      "name": "Trinity Garage",
+      "address": "1815 Trinity St, Austin, TX 78712"
+    },
+    "isPrivate": false,
+    "capacity": 5
+  },
+  {
+    "name": "Food @ Kokodak",
+    "description": "Walk with us to grab food",
+    "creator": "60f192fc849c8f000dcfa732",
+    "members": [
+      "60f192fc849c8f000dcfa732",
+      "60f19013849c8f000dcfa725",
+      "60ecc80e5a8b24000dce498e"
+    ],
+    "emoji": "🥘",
+    "tags": ["food", "meet-up"],
+    "location": {
+      "point": {
+        "type": "Point",
+        "coordinates": [-97.74068512338818, 30.290690242916117]
+      },
+      "name": "Living Learning Centers",
+      "address": "Austin, TX 78705"
+    },
+    "isPrivate": false,
+    "capacity": 8
+  },
+  {
+    "name": "Grab a munch at Kokodak",
+    "description": "lunch",
+    "creator": "60ecc72d5a8b24000dce494a",
+    "members": [
+      "60ecc72d5a8b24000dce494a",
+      "60ecc2290b89b9000df17da5",
+      "60ecc1d10b89b9000df17d4b",
+      "60ecc1930b89b9000df17cdf"
+    ],
+    "emoji": "🥘",
+    "tags": ["food", "meet-up"],
+    "location": {
+      "point": {
+        "type": "Point",
+        "coordinates": [-97.74294952702112, 30.290845599517898]
+      },
+      "name": "ATX MetroBike Station",
+      "address": "600 W 26th St, Austin, TX 78705"
+    },
+    "isPrivate": false,
+    "capacity": 6
+  },
+  {
+    "name": "University Christian Church meet-up",
+    "description": "Get-together at church",
+    "creator": "60ecc0890b89b9000df177f7",
+    "members": [
+      "60ecc0890b89b9000df177f7",
+      "60e7c8afc19b57000dd0fbce",
+      "60df04c896b655000ddbb815"
+    ],
+    "emoji": "⛪️",
+    "tags": ["church", "unwind", "social", "gathering"],
+    "location": {
+      "point": {
+        "type": "Point",
+        "coordinates": [-97.7395987305062, 30.278918047304334]
+      },
+      "name": "Littlefield Fountain",
+      "address": "201 W 21st St, Austin, TX 78705"
+    },
+    "isPrivate": false,
+    "capacity": 5
+  },
+  {
+    "name": "Get cultured",
+    "description": "Casual trip to Blanton Art Museum",
+    "creator": "60de5092abdbca45038bde9e",
+    "members": ["60de5092abdbca45038bde9e", "60de4fdaaaa8c5426cae9941"],
+    "emoji": "🖼",
+    "tags": ["art", "museum"],
+    "location": {
+      "point": {
+        "type": "Point",
+        "coordinates": [-97.73731906974108, 30.288766855951568]
+      },
+      "name": "112 Martin Luther King Jr/Congress",
+      "address": "Austin, TX 78712"
+    },
+    "isPrivate": false,
+    "capacity": 6
+  },
+  {
+    "name": "Get active (at Gregory Gymnasium)!!! Looking for a partner",
+    "description": "Walking to gym + working out at gym :D",
+    "creator": "60de4fc3e0c4543eb260eca6",
+    "members": ["60de4fc3e0c4543eb260eca6", "60de4f6ce0c4543eb260eca5"],
+    "emoji": "🏋️",
+    "tags": ["in-person", "gathering"],
+    "location": {
+      "point": {
+        "type": "Point",
+        "coordinates": [-97.73947884361895, 30.281580063426254]
+      },
+      "name": "ATX MetroBike Station",
+      "address": "2007 University Ave, Austin, TX 78705"
+    },
+    "isPrivate": false,
+    "capacity": 2
+  },
+  {
+    "name": "Walk to concert at Bass Concert Hall",
+    "description": "walk together to concert hall",
+    "creator": "60de4ed4e0c4543eb260eca4",
+    "members": [
+      "60de4ed4e0c4543eb260eca4",
+      "60dbe5fd6486be000df48e0c",
+      "60dbe5cc6486be000df48dfc",
+      "60dbe5a06486be000df48de9"
+    ],
+    "emoji": "🎶",
+    "tags": [
+      "in-person",
+      "gathering",
+      "walk",
+      "music",
+      "concert",
+      "exercise",
+      "activity"
+    ],
+    "location": {
+      "point": {
+        "type": "Point",
+        "coordinates": [-97.73350150389749, 30.286830026406374]
+      },
+      "name": "400 23rd/San Jacinto",
+      "address": "Austin, TX 78705"
+    },
+    "isPrivate": false,
+    "capacity": 20
+  },
+  {
+    "name": "Trip to mall",
+    "description": "Meeting at bus-stop to go to mall together!",
+    "creator": "60db9e3974dfe1000d0b6d6c",
+    "members": ["60db9e3974dfe1000d0b6d6c", "60db9d6774dfe1000d0b6d3d"],
+    "emoji": "🛍",
+    "tags": ["in-person", "gathering", "trip", "shopping", "mall"],
+    "location": {
+      "point": {
+        "type": "Point",
+        "coordinates": [-97.72776129301768, 30.287178229736842]
+      },
+      "name": "Lot 39",
+      "address": "Austin, TX 78705"
+    },
+    "isPrivate": false,
+    "capacity": 5
+  }
+]

@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "636156711768",
+    "firebase_url": "https://pop-mobile-app.firebaseio.com",
+    "project_id": "pop-mobile-app",
+    "storage_bucket": "pop-mobile-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:636156711768:android:b0cc89d80f13408c",
+        "android_client_info": {
+          "package_name": "com.pop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "636156711768-5rjkmi652ldmvt0nq6c9rms5eop36p5s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pop",
+            "certificate_hash": "71b1cbb5e64ade61ec5f0d57c0ee9487b66f733c"
+          }
+        },
+        {
+          "client_id": "636156711768-jf4mta2nocoe2f17jonoiknd8kd6tv3g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBn81GMOa7ZdkIYUF8kahVkQVbajoou1go"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "636156711768-jf4mta2nocoe2f17jonoiknd8kd6tv3g.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "636156711768-0egc3nbgckl9crulk0mldljqo8nepags.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.pop.popexperimental"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:636156711768:android:65967f345d5b6e658acb2d",
+        "android_client_info": {
+          "package_name": "com.popsocial"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "636156711768-7893q1k7k86oahh0e4q47e4i5hbd9ovi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.popsocial",
+            "certificate_hash": "806409522e4455af8f15d7b0711d21990039dad3"
+          }
+        },
+        {
+          "client_id": "636156711768-jf4mta2nocoe2f17jonoiknd8kd6tv3g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBn81GMOa7ZdkIYUF8kahVkQVbajoou1go"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "636156711768-jf4mta2nocoe2f17jonoiknd8kd6tv3g.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "636156711768-0egc3nbgckl9crulk0mldljqo8nepags.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.pop.popexperimental"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

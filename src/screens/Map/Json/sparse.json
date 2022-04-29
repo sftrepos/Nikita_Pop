@@ -1,0 +1,159 @@
+[
+  {
+    "name": "CS Study Session",
+    "description": "In-person meet-up study session at EECS building",
+    "creator": "60db9c2d46b1aa000d55e362",
+    "members": [
+      "60db9c2d46b1aa000d55e362",
+      "60d8cde8966678000d0865ef",
+      "60d66c135e48bf000de42172",
+      "60d66ba55e48bf000de420d6",
+      "60d66b015e48bf000de4202e",
+      "60d66a7b5e48bf000de41f89",
+      "60d66b015e48bf000de4202e",
+      "60d66a7b5e48bf000de41f89"
+    ],
+    "emoji": "📖",
+    "tags": ["reading", "study"],
+    "location": {
+      "point": {
+        "type": "Point",
+        "coordinates": [-97.73537868450201, 30.288198471894116]
+      },
+      "name": "The University of Texas Department of Electrical and Computer Engineering",
+      "address": "2501 Speedway, Austin, TX 78712"
+    },
+    "isPrivate": false,
+    "capacity": 5
+  },
+  {
+    "name": "Basketball training",
+    "description": "Travelling to basketball sports team training",
+    "creator": "60d8a0025db36f000d033218",
+    "members": [
+      "60d8a0025db36f000d033218",
+      "60d89f6e5db36f000d033195",
+      "60d899cad30c8a000d5a1a76",
+      "60d899146f547c000d3ee266",
+      "60d8805a36874f000d7ac8d1"
+    ],
+    "emoji": "🏀",
+    "tags": ["activity", "meet-up", "sports"],
+    "location": {
+      "point": {
+        "type": "Point",
+        "coordinates": [-97.73136331917398, 30.283957506394913]
+      },
+      "name": "The University of Texas Club",
+      "address": "2108 Robert Dedman Dr, Austin, TX 78712"
+    },
+    "isPrivate": false,
+    "capacity": 10
+  },
+  {
+    "name": "Soccer casual session",
+    "description": "Casual soccer meet-up",
+    "creator": "60d66c135e48bf000de42172",
+    "members": [
+      "60d66c135e48bf000de42172",
+      "60d66ba55e48bf000de420d6",
+      "60d66b015e48bf000de4202e",
+      "60d66a7b5e48bf000de41f89",
+      "60d66b015e48bf000de4202e",
+      "60d66a7b5e48bf000de41f89"
+    ],
+    "emoji": "⚽️",
+    "tags": ["activity", "meet-up", "sports"],
+    "location": {
+      "point": {
+        "type": "Point",
+        "coordinates": [-97.73287438992767, 30.281580063426254]
+      },
+      "name": "Recreational Sports Center",
+      "address": "2001 San Jacinto Blvd, Austin, TX 78712"
+    },
+    "isPrivate": false,
+    "capacity": 22
+  },
+  {
+    "name": "Meal at Vic and Al's!",
+    "description": "Going to Vic and Al's for just a meal together",
+    "creator": "60d667385e48bf000de41e82",
+    "members": [
+      "60d667385e48bf000de41e82",
+      "60d663545e48bf000de41d65",
+      "60d65e0d5e48bf000de41c5b"
+    ],
+    "emoji": "🍲",
+    "tags": ["food"],
+    "location": {
+      "point": {
+        "type": "Point",
+        "coordinates": [-97.72772867493617, 30.285788976325417]
+      },
+      "name": "Lot 39",
+      "address": "Austin, TX 78705"
+    },
+    "isPrivate": false,
+    "capacity": 4
+  },
+  {
+    "name": "Swimming at Lee & Joe Swimming Center",
+    "description": "casual swim",
+    "creator": "60d6285678a758000d36dee1",
+    "members": ["60d6285678a758000d36dee1", "60d53dfe5151c8000d6ae35e"],
+    "emoji": "🏊",
+    "tags": ["swimming", "activity", "exercise"],
+    "location": {
+      "point": {
+        "type": "Point",
+        "coordinates": [-97.73381768296161, 30.278918047304334]
+      },
+      "name": "Trinity Garage",
+      "address": "1815 Trinity St, Austin, TX 78712"
+    },
+    "isPrivate": false,
+    "capacity": 5
+  },
+  {
+    "name": "University store",
+    "description": "shop supplies",
+    "creator": "60d53bac5151c8000d6ae248",
+    "members": [
+      "60d53bac5151c8000d6ae248",
+      "60d537fb5151c8000d6ae1b6",
+      "60d5374b5151c8000d6ae0e0",
+      "60c97809c242b3000d97363c"
+    ],
+    "emoji": "🛍",
+    "tags": ["shopping", "school", "supplies"],
+    "location": {
+      "point": {
+        "type": "Point",
+        "coordinates": [-97.74224125386586, 30.28618977490367]
+      },
+      "name": "University Co-op",
+      "address": "2246 Guadalupe St, Austin, TX 78705"
+    },
+    "isPrivate": false,
+    "capacity": 6
+  },
+  {
+    "name": "Going to Target",
+    "description": "Trip to Target",
+    "creator": "60c79d5093c1b1000dd4af21",
+    "members": ["60c79d5093c1b1000dd4af21", "5f806e2d21cfef0011140ab5"],
+    "emoji": "🎯",
+    "tags": ["shopping"],
+    "location": {
+      "point": {
+        "type": "Point",
+        "coordinates": [-97.73959658958557, 30.283948779589664]
+      },
+      "name": "Littlefield Fountain",
+      "address": "201 W 21st St, Austin, TX 78705"
+    },
+    "isPrivate": false,
+    "capacity": 6
+  }
+]

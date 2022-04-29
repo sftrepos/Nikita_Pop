@@ -1,0 +1,4 @@
+{
+  // "eslint.enable": false,
+  "god.tsconfig": "./tsconfig.json"
+}

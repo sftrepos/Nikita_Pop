@@ -1,0 +1,10 @@
+# iOS Config
+app_identifier("com.urbubblepop.pop") # The bundle identifier of your app
+apple_id("yourbubblepop@gmail.com") # Your Apple email address
+
+itc_team_id("120029000") # App Store Connect Team ID
+team_id("LWCC5VKACV") # Developer Portal Team ID
+
+# Android Config
+json_key_file("fastlane/play-store-service-account.json") # service account from play store console
+package_name("com.popsocial") # Android app id

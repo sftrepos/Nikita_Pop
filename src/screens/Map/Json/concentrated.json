@@ -1,0 +1,259 @@
+[
+  {
+    "name": "Communication Study Session",
+    "description": "In-person meet-up study session at College of Communication",
+    "creator": "610236cc0d27a9d513d85cc3",
+    "members": ["610236cc0d27a9d513d85cc3", "610235e290c5e1d156727086"],
+    "emoji": "📖",
+    "tags": ["reading", "study"],
+    "location": {
+      "point": {
+        "type": "Point",
+        "coordinates": [-97.73338720026229, 30.285342173641723]
+      },
+      "name": "Texas Coffee Traders Cart",
+      "address": "E 23rd St, Austin, TX 78705"
+    },
+    "isPrivate": false,
+    "capacity": 5
+  },
+  {
+    "name": "Basketball training",
+    "description": "Travelling to basketball sports team training",
+    "creator": "610235b2a1bfb6d06245f0cf",
+    "members": [
+      "610235b2a1bfb6d06245f0cf",
+      "610235837505d4cfe888c8ca",
+      "610234ce64fe36cee823fce8",
+      "610234757aea89ce4404327c",
+      "61023313b15042cce3d7bb93"
+    ],
+    "emoji": "🏀",
+    "tags": ["activity", "meet-up", "sports"],
+    "location": {
+      "point": {
+        "type": "Point",
+        "coordinates": [-97.73338720026229, 30.285342173641723]
+      },
+      "name": "Texas Coffee Traders Cart",
+      "address": "E 23rd St, Austin, TX 78705"
+    },
+    "isPrivate": false,
+    "capacity": 10
+  },
+  {
+    "name": "Soccer casual session",
+    "description": "Casual soccer meet-up",
+    "creator": "61023313b15042cce3d7bb93",
+    "members": [
+      "61023313b15042cce3d7bb93",
+      "610232ce664bb1cc6a4680e2",
+      "6102324224bebbcb1a45a7df",
+      "6102101299a688b2fa6f630d"
+    ],
+    "emoji": "⚽️",
+    "tags": ["activity", "meet-up", "sports"],
+    "location": {
+      "point": {
+        "type": "Point",
+        "coordinates": [-97.73338720026229, 30.285342173641723]
+      },
+      "name": "Texas Coffee Traders Cart",
+      "address": "E 23rd St, Austin, TX 78705"
+    },
+    "isPrivate": false,
+    "capacity": 22
+  },
+  {
+    "name": "Meal at Vic and Al's!",
+    "description": "Going to Vic and Al's for just a meal together",
+    "creator": "61020f09f7695cb1cfbf1990",
+    "members": [
+      "61020f09f7695cb1cfbf1990",
+      "6101eebe1a344a969013d591",
+      "6101ee3500d32595a23c84ac"
+    ],
+    "emoji": "🍲",
+    "tags": ["food"],
+    "location": {
+      "point": {
+        "type": "Point",
+        "coordinates": [-97.73242655044687, 30.284846549232892]
+      },
+      "name": "Texas Athletics Nutrition Center",
+      "address": "405 E 23rd St, Austin, TX 78712"
+    },
+    "isPrivate": false,
+    "capacity": 4
+  },
+  {
+    "name": "Swimming at Lee & Joe Swimming Center",
+    "description": "casual swim",
+    "creator": "6101edb98f31c694f6574ff1",
+    "members": ["6101edb98f31c694f6574ff1", "6101eb440b96b591d54197a9"],
+    "emoji": "🏊",
+    "tags": ["swimming", "activity", "exercise"],
+    "location": {
+      "point": {
+        "type": "Point",
+        "coordinates": [-97.73371074219905, 30.284096157283074]
+      },
+      "name": "Texas Team Shop",
+      "address": "2109 San Jacinto Blvd, Austin, TX 78712"
+    },
+    "isPrivate": false,
+    "capacity": 5
+  },
+  {
+    "name": "Food @ Kokodak",
+    "description": "Walk with us to grab food",
+    "creator": "6101dda294bcce7e23de68c4",
+    "members": [
+      "6101dda294bcce7e23de68c4",
+      "6101db8049d6e97a88d38230",
+      "6101d7cd073d16748a533a29"
+    ],
+    "emoji": "🥘",
+    "tags": ["food", "meet-up"],
+    "location": {
+      "point": {
+        "type": "Point",
+        "coordinates": [-97.73452602629442, 30.28439161981119]
+      },
+      "name": "Rosemary's Catering",
+      "address": "2110 San Jacinto Blvd, Austin, TX 78712"
+    },
+    "isPrivate": false,
+    "capacity": 8
+  },
+  {
+    "name": "Grab a munch at Kokodak",
+    "description": "lunch",
+    "creator": "6101d703a4fce672f3fc7f00",
+    "members": [
+      "6101d703a4fce672f3fc7f00",
+      "6101d6c68bd87c7243d6a655",
+      "6101d5e466915370e420a1ae",
+      "6101d4b3ef5d656f0d9ee304"
+    ],
+    "emoji": "🥘",
+    "tags": ["food", "meet-up"],
+    "location": {
+      "point": {
+        "type": "Point",
+        "coordinates": [-97.73285608880265, 30.28612832947074]
+      },
+      "name": "Department of Art and Art History (ART)",
+      "address": "2301 San Jacinto Blvd, Austin, TX 78705"
+    },
+    "isPrivate": false,
+    "capacity": 6
+  },
+  {
+    "name": "University Christian Church meet-up",
+    "description": "Get-together at church",
+    "creator": "6101d499e25c176eaab1957c",
+    "members": [
+      "6101d499e25c176eaab1957c",
+      "6101d4634dac036e079b8092",
+      "6101d2f37590de6aa8e3f505"
+    ],
+    "emoji": "⛪️",
+    "tags": ["church", "unwind", "social", "gathering"],
+    "location": {
+      "point": {
+        "type": "Point",
+        "coordinates": [-97.7322283146608, 30.28526056249482]
+      },
+      "name": "The Stark Center for Physical Culture and Sports",
+      "address": "403 Deloss Dodds Way, Austin, TX 78712"
+    },
+    "isPrivate": false,
+    "capacity": 5
+  },
+  {
+    "name": "Get cultured",
+    "description": "Casual trip to Blanton Art Museum",
+    "creator": "6101d2f27590de6aa8e3f504",
+    "members": ["6101d2f27590de6aa8e3f504", "6101d236117fc2691c741817"],
+    "emoji": "🖼",
+    "tags": ["art", "museum"],
+    "location": {
+      "point": {
+        "type": "Point",
+        "coordinates": [-97.7322283146608, 30.28526056249482]
+      },
+      "name": "The Stark Center for Physical Culture and Sports",
+      "address": "403 Deloss Dodds Way, Austin, TX 78712"
+    },
+    "isPrivate": false,
+    "capacity": 6
+  },
+  {
+    "name": "Get active (at Gregory Gymnasium)!!! Looking for a partner",
+    "description": "Walking to gym + working out at gym :D",
+    "creator": "6101d193025a01682119ff46",
+    "members": ["6101d193025a01682119ff46", "6101ce6760937564207109a3"],
+    "emoji": "🏋️",
+    "tags": ["in-person", "gathering"],
+    "location": {
+      "point": {
+        "type": "Point",
+        "coordinates": [-97.73262530711808, 30.285083478876626]
+      },
+      "name": "501 23rd/Trinity",
+      "address": "Austin, TX 78712"
+    },
+    "isPrivate": false,
+    "capacity": 2
+  },
+  {
+    "name": "Walk to concert at Bass Concert Hall",
+    "description": "walk together to concert hall",
+    "creator": "60fdcd3f0d71c11c6fa4d2a9",
+    "members": [
+      "60fdcd3f0d71c11c6fa4d2a9",
+      "60fdccefae18fa1bd8c419ba",
+      "60fdccc911a9fc1b65cef238",
+      "60fdcb096f0658194d169327"
+    ],
+    "emoji": "🎶",
+    "tags": [
+      "in-person",
+      "gathering",
+      "walk",
+      "music",
+      "concert",
+      "exercise",
+      "activity"
+    ],
+    "location": {
+      "point": {
+        "type": "Point",
+        "coordinates": [-97.73303003933889, 30.285346084674448]
+      },
+      "name": "23rd/Trinity NW Corner",
+      "address": "Austin, TX 78705"
+    },
+    "isPrivate": false,
+    "capacity": 20
+  },
+  {
+    "name": "Trip to mall",
+    "description": "Meeting at bus-stop to go to mall together!",
+    "creator": "60fdcaad06927a17191b270c",
+    "members": ["60fdcaad06927a17191b270c", "60fdca70ed002c1546ff147d"],
+    "emoji": "🛍",
+    "tags": ["in-person", "gathering", "trip", "shopping", "mall"],
+    "location": {
+      "point": {
+        "type": "Point",
+        "coordinates": [-97.73343584893786, 30.286038214451576]
+      },
+      "name": "San Jacinto/23rd (Midblock)",
+      "address": "Austin, TX 78705"
+    },
+    "isPrivate": false,
+    "capacity": 5
+  }
+]

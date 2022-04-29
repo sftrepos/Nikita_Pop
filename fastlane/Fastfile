@@ -1,0 +1,360 @@
+CURRENT_ENV=ENV['env']
+#
+# iOS
+#
+platform :ios do
+  ENV["MATCH_PASSWORD"] = ENV["IOS_MATCH_PASSWORD"]
+  IOS_APPLESTORE_API_KEY_FNAME=".ci-applestore-api-key"
+  IOS_APPLESTORE_API_KEY_PATH="#{ENV["PWD"]}/#{IOS_APPLESTORE_API_KEY_FNAME}"
+
+  #
+  # Update ENV
+  #
+  lane:update_env do
+    update_env_file()
+  end
+
+  #
+  # Download certs/provisions files
+  #
+  lane :setup do
+    run_match()
+  end
+
+  #
+  # Dev
+  #
+  lane :dev do
+    create_applestore_api_key()
+    run_app_store_connect_api_key()
+    setup_ci()
+    run_match()
+
+    version_name = get_version_name()
+    run_increment_version_number(version_name)
+    build_number = run_get_build_number(version_name)
+    run_increment_build_number(build_number)
+
+    run_build_app()
+
+    remove_applestore_api_key()
+  end 
+
+  #
+  # Prod
+  #
+  lane :prod do
+    create_applestore_api_key()
+    run_app_store_connect_api_key()
+    setup_ci()
+    run_match()
+
+    version_name = get_version_name()
+    run_increment_version_number(version_name)
+    build_number = run_get_build_number(version_name)
+    run_increment_build_number(build_number)
+
+    run_build_app()
+    run_upload_to_testflight(
+      version_name,
+      build_number
+    )
+
+    # push updated configs files
+    git_release_version_commit(
+      "../ios/",
+      "VERSION: ios-#{version_name}-#{build_number}-#{CURRENT_ENV}"
+    )
+    git_release_tag([
+      "ios-#{version_name}-#{build_number}-#{CURRENT_ENV}"
+    ])
+    remove_applestore_api_key()
+  end
+
+  #
+  # iOS Fastlane Methods
+  #
+  def run_app_store_connect_api_key()
+    ios_api_key = app_store_connect_api_key(
+      key_id: ENV["IOS_APPLESTORE_API_KEY_ID"],
+      issuer_id: ENV["IOS_APPLESTORE_ISSUER_ID"],
+      # key_filepath: IOS_APPLESTORE_API_KEY_PATH
+      key_content: ENV["IOS_APPLESTORE_API_KEY"]
+    )
+  end
+
+  def run_match()
+    match(
+      git_branch: "master",
+      git_url: "https://github.com/pop-your-bubble/mobile-dist-keys.git",
+      git_basic_authorization: Base64.strict_encode64("#{ENV["GIT_API_USERNAME"]}:#{ENV["GIT_API_KEY"]}"),
+      type: "appstore",
+      shallow_clone: true,
+      readonly: true,
+    )
+  end
+
+  def run_get_build_number(
+    version_name
+  )
+    return latest_testflight_build_number(initial_build_number: 0, version: version_name) + 1
+  end
+
+  def run_increment_build_number(
+    build_number
+  )
+    increment_build_number(
+     build_number: build_number,
+     xcodeproj: "ios/Pop.xcodeproj"
+    )
+  end
+
+  def run_increment_version_number(
+    version_name
+  )
+    increment_version_number(
+     version_number: version_name,
+     xcodeproj: "ios/Pop.xcodeproj"
+    )
+  end
+
+  def run_build_app()
+    build_app(
+      workspace: "ios/Pop.xcworkspace",
+      scheme: "Pop"
+    )
+  end
+
+  def run_upload_to_testflight(
+    version_name,
+    build_number
+  )
+    build_number = (build_number).to_s
+    upload_to_testflight(
+      skip_waiting_for_build_processing: true,
+      app_version: version_name,
+      build_number: build_number,
+    )
+  end
+
+  #
+  # iOS Util
+  #
+
+  def create_applestore_api_key()
+    out_file = File.new(IOS_APPLESTORE_API_KEY_PATH, "w")
+    out_file.printf(ENV["IOS_APPLESTORE_API_KEY"])
+    out_file.close
+    sh("echo", IOS_APPLESTORE_API_KEY_PATH)
+  end
+
+  def remove_applestore_api_key()
+    sh("rm", IOS_APPLESTORE_API_KEY_PATH)
+  end
+end 
+
+#
+# Android
+#
+platform :android do
+
+  ANDROID_KEYSTORE_FNAME=".ci-keystore"
+  ANDROID_KEYSTORE_PATH="#{ENV["PWD"]}/#{ANDROID_KEYSTORE_FNAME}"
+
+  #
+  # Update ENV
+  #
+  lane:update_env do
+    update_env_file()
+  end
+
+  #
+  # Dev
+  #
+  lane :dev do
+    run_gradle_clean()
+    create_keystore_file()
+
+    version_name = get_version_name()
+    set_version_name(version_name)
+    version_code = get_version_code()
+    set_version_code(version_code)
+
+    run_gradle()
+
+    remove_keystore_file()
+  end 
+
+  #
+  # Prod
+  #
+  lane :prod do
+    run_gradle_clean()
+    create_keystore_file()
+
+    version_name = get_version_name()
+    set_version_name(version_name)
+    version_code = get_version_code()
+    set_version_code(version_code)
+
+    run_gradle()
+    run_upload_to_play_store(
+      version_name,
+      version_code
+    )
+
+    # push updated configs files
+    git_release_version_commit(
+      "../android/",
+      "VERSION: android-#{version_name}-#{version_code}-#{CURRENT_ENV}"
+    )
+    git_release_tag([
+      "android-#{version_name}-#{version_code}-#{CURRENT_ENV}"
+    ])
+    remove_keystore_file()
+  end
+
+  #
+  # Android Fastlane Methods
+  #
+  def run_gradle_clean()
+    gradle(
+      task: "clean",
+      project_dir: 'android'
+    )
+  end
+
+  def run_gradle()
+    gradle(
+      task: 'bundle',
+      build_type: 'Release',
+      project_dir: 'android',
+      # print_command_output: true,
+      properties: {
+        "android.injected.signing.store.file" => ANDROID_KEYSTORE_PATH,
+        "android.injected.signing.store.password" => ENV["ANDROID_KEYSTORE_PASSWORD"],
+        "android.injected.signing.key.alias" => ENV["ANDROID_KEY_ALIAS"],
+        "android.injected.signing.key.password" => ENV["ANDROID_KEY_PASSWORD"]
+      }
+    )
+  end
+
+  def run_upload_to_play_store(
+    version_name,
+    version_code
+  )
+    upload_to_play_store(
+      track: 'internal',
+      version_name: version_name,
+      version_code: version_code,
+    )
+  end
+
+  #
+  # Android Util
+  #
+  def create_keystore_file()
+    sh("echo $ANDROID_KEYSTORE | base64 -d $1 > #{ANDROID_KEYSTORE_PATH}")
+  end
+
+  def remove_keystore_file()
+    sh("rm", ANDROID_KEYSTORE_PATH)
+  end
+
+  def get_version_code()
+    g = google_play_track_version_codes
+    gb = google_play_track_version_codes(track: 'beta')
+    ga = google_play_track_version_codes(track: 'alpha')
+    gi = google_play_track_version_codes(track: 'internal')
+    max_version_code = [g[0].to_i, gb[0].to_i, ga[0].to_i, gi[0].to_i].max
+    new_version_code = max_version_code + 1
+    sh("echo VERSION_CODE=#{new_version_code}")
+    return new_version_code
+  end
+
+  def set_version_name(version_name)
+    path = '../android/app/build.gradle'
+    re = /versionName\s+(.*$)/
+    quoted_version_name = "\"#{version_name}\""
+    sh("echo #{quoted_version_name}")
+
+    s = File.read(path)
+    s[re, 1] = quoted_version_name
+
+    f = File.new(path, 'w')
+    f.write(s)
+    f.close
+  end
+
+  def set_version_code(version_code)
+    path = '../android/app/build.gradle'
+    re = /versionCode\s+(\d+)/
+
+    s = File.read(path)
+    # version_code = s[re, 1].to_i
+    # s[re, 1] = (version_code + 1).to_s
+    s[re, 1] = (version_code).to_s
+
+    f = File.new(path, 'w')
+    f.write(s)
+    f.close
+  end
+end
+
+#
+# Util functions for both platforms
+#
+def get_version_name()
+  #require 'json'
+  #path = './metadata.json'
+  #f = File.read(path)
+  #version_data = JSON.load f
+  #v_major = version_data['major']
+  #v_minor = version_data['minor']
+  #v_patch = version_data['patch']
+  #version_name = "#{v_major}.#{v_minor}.#{v_patch}"
+
+  version_name = ENV["VERSION"]
+  sh("echo VERSION=#{version_name}")
+  return version_name
+end
+
+def git_release_version_commit(
+  changes,
+  message
+)
+  # user should look at the released *tags to identify which commit HASH was released
+  # a commit made by this only serve as an auto update, and not an indication of released app's latest commit
+  current_branch = run_git_branch()
+  sh("git pull origin #{current_branch}")
+  sh("git add #{changes}")
+  sh("git commit -m '#{message}' || true")
+  sh("git push")
+end
+
+def git_release_tag(tag_list)
+  for tag in tag_list do
+    sh("git tag -d #{tag} || true")
+    sh("git push origin :refs/tags/#{tag}")
+    sh("git tag #{tag}")
+    sh("git push origin #{tag}")
+  end
+end
+
+def run_git_branch()
+  return git_branch()
+end
+
+def update_env_file()
+  # updates local .env file
+  # appending .env.production values to overwrite
+  line_indicator_word = "OVERRIDING_ENV_FASTLANE"
+  line_indicator = "### #{line_indicator_word} ###"
+
+  sh("echo >> ../.env")
+  sh("echo '#{line_indicator}' >> ../.env")
+  sh("cat ../.env.production >> ../.env")
+  # sh("sed -i '/#{line_indicator_word}/Q' ../.env")
+end
+
+skip_docs()
